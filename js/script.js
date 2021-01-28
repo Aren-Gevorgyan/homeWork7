@@ -15,7 +15,6 @@ function setSreen() {
             alert(error);
         });
 }
-//dfdf
 setSreen();
 
 // });
