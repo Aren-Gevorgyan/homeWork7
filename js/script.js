@@ -5,16 +5,18 @@
 
 // lockButton.addEventListener('click', function() {
 function setSreen() {
-    if (document.documentElement.requestFullscreen)
+    if (document.documentElement.requestFullscreen) {
         document.querySelector(".container").requestFullscreen();
-    else if (document.documentElement.webkitRequestFullScreen)
+    } else if (document.documentElement.webkitRequestFullScreen) {
         document.querySelector(".container").webkitRequestFullScreen();
-    screen.orientation.lock("landscape-primary")
-        .then(function() {})
-        .catch(function(error) {
-            alert(error);
-        });
+        screen.orientation.lock("landscape-primary")
+            .then(function() {})
+            .catch(function(error) {
+                alert(error);
+            });
+    }
 }
+//dfdf
 setSreen();
 
 // });
