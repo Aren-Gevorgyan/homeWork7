@@ -4,7 +4,7 @@
 // status.innerHTML = screen.orientation.type + ' mode';
 
 // lockButton.addEventListener('click', function() {
-async function setSreen() {
+function setSreen() {
     console.log(1)
     if (document.documentElement.requestFullscreen)
         document.querySelector(".container").requestFullscreen();
