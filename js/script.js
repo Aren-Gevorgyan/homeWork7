@@ -10,9 +10,7 @@ else if (document.documentElement.webkitRequestFullScreen)
     document.querySelector(".container").webkitRequestFullScreen();
 
 screen.orientation.lock("landscape-primary")
-    .then(function() {
-        // lockButton.style.display = 'none';
-    })
+    .then(function() {})
     .catch(function(error) {
         alert(error);
     });
