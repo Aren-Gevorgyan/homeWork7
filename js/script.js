@@ -5,9 +5,9 @@ status.innerHTML = screen.orientation.type + ' mode';
 //aaaa
 window.addEventListener('load', function() {
     if (document.documentElement.requestFullscreen)
-        document.querySelector(".container").requestFullscreen();
+        document.querySelector(".container").requestFullscreen({ navigationUI: "show" });
     else if (document.documentElement.webkitRequestFullScreen)
-        document.querySelector(".container").webkitRequestFullScreen();
+        document.querySelector(".container").webkitRequestFullScreen({ navigationUI: "show" });
 
     screen.orientation.lock("landscape-primary")
         .then(function() {
