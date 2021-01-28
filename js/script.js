@@ -2,7 +2,7 @@ let lockButton = document.querySelector("#lock-landscape-button"),
     status = document.querySelector("#orientation-status");
 
 status.innerHTML = screen.orientation.type + ' mode';
-//ssssss
+
 window.addEventListener('load', async function() {
     if (document.documentElement.requestFullscreen)
         await document.querySelector(".container").requestFullscreen({ navigationUI: "show" });
