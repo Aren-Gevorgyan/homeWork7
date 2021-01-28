@@ -16,6 +16,7 @@ function setSreen() {
             });
     }
 }
+//ssd
 setSreen();
 window.screen.orientation.lock("landscape-primary")
 
