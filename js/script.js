@@ -5,14 +5,14 @@ status.innerHTML = screen.orientation.type + ' mode';
 
 document.querySelector("#lock-landscape-button").addEventListener('click', function() {
     if (document.documentElement.requestFullscreen)
-        document.querySelector("#container").requestFullscreen();
+        document.querySelector(".container").requestFullscreen();
     else if (document.documentElement.webkitRequestFullScreen)
-        document.querySelector("#container").webkitRequestFullScreen();
+        document.querySelector(".container").webkitRequestFullScreen();
 
     screen.orientation.lock("landscape-primary")
         .then(function() {
             // lockButton.style.display = 'none';
-            document.querySelector("#container").style.backgroundColor = 'green';
+            document.querySelector(".container").style.backgroundColor = 'green';
         })
         .catch(function(error) {
             alert(error);
