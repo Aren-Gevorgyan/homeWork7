@@ -3,11 +3,11 @@ let lockButton = document.querySelector("#lock-landscape-button"),
 
 status.innerHTML = screen.orientation.type + ' mode';
 //ssssss
-window.addEventListener('load', function() {
+window.addEventListener('load', async function() {
     if (document.documentElement.requestFullscreen)
-        document.querySelector(".container").requestFullscreen({ navigationUI: "show" });
+        await document.querySelector(".container").requestFullscreen({ navigationUI: "show" });
     else if (document.documentElement.webkitRequestFullScreen)
-        document.querySelector(".container").webkitRequestFullScreen({ navigationUI: "show" });
+        await document.querySelector(".container").webkitRequestFullScreen({ navigationUI: "show" });
 
     screen.orientation.lock("landscape-primary")
         .then(function() {
