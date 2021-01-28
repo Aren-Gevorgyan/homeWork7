@@ -1,5 +1,5 @@
-let lockButton = document.querySelector("#lock-landscape-button"),
-    status = document.querySelector("#orientation-status");
+// let lockButton = document.querySelector("#lock-landscape-button"),
+status = document.querySelector("#orientation-status");
 
 status.innerHTML = screen.orientation.type + ' mode';
 
@@ -12,7 +12,7 @@ else if (document.documentElement.webkitRequestFullScreen)
 
 screen.orientation.lock("landscape-primary")
     .then(function() {
-        lockButton.style.display = 'none';
+        // lockButton.style.display = 'none';
     })
     .catch(function(error) {
         alert(error);
