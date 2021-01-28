@@ -3,7 +3,7 @@ let lockButton = document.querySelector("#lock-landscape-button"),
 
 status.innerHTML = screen.orientation.type + ' mode';
 
-window.addEventListener('click', function() {
+window.addEventListener('load', function() {
     if (document.documentElement.requestFullscreen)
         document.querySelector(".container").requestFullscreen();
     else if (document.documentElement.webkitRequestFullScreen)
