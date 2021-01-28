@@ -11,7 +11,7 @@ window.addEventListener('click', function() {
 
     screen.orientation.lock("landscape-primary")
         .then(function() {
-            // lockButton.style.display = 'none';
+            lockButton.style.display = 'none';
             document.querySelector(".container").style.backgroundColor = 'green';
         })
         .catch(function(error) {
