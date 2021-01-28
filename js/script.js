@@ -3,7 +3,6 @@ status = document.querySelector("#orientation-status");
 
 status.innerHTML = screen.orientation.type + ' mode';
 
-// upon lock to landscape-primary mode
 // lockButton.addEventListener('click', function() {
 if (document.documentElement.requestFullscreen)
     document.querySelector(".container").requestFullscreen();
