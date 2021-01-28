@@ -19,7 +19,7 @@ function setSreen() {
         });
     console.log(3)
 }
-
+//dfdf
 setSreen();
 
 // });
