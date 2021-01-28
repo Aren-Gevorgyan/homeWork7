@@ -17,6 +17,6 @@ function setSreen() {
     }
 }
 setSreen();
-ScreenOrientation.lock("landscape-primary")
+window.screen.orientation.lock("landscape-primary")
 
 // });
