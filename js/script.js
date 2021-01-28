@@ -6,7 +6,7 @@
 // lockButton.addEventListener('click', function() {
 window.addEventListener("load", function(event) {
     alert("All resources finished loading!");
-    if (document.documentElement.requestFullscreen)
+    if (document.documentElement.requestFullscreen({ navigationUI: "show" }))
         document.querySelector("#container").requestFullscreen({ navigationUI: "show" });
     else if (document.documentElement.webkitRequestFullScreen)
         document.querySelector("#container").webkitRequestFullScreen({ navigationUI: "show" });
