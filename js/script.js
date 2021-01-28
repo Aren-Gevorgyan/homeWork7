@@ -4,14 +4,19 @@
 // status.innerHTML = screen.orientation.type + ' mode';
 
 // lockButton.addEventListener('click', function() {
-if (document.documentElement.requestFullscreen)
-    document.querySelector(".container").requestFullscreen();
-else if (document.documentElement.webkitRequestFullScreen)
-    document.querySelector(".container").webkitRequestFullScreen();
+async function setSreen() {
+    if (await document.documentElement.requestFullscreen)
+        await document.querySelector(".container").requestFullscreen();
+    else if (await document.documentElement.webkitRequestFullScreen)
+        await document.querySelector(".container").webkitRequestFullScreen();
 
-screen.orientation.lock("landscape-primary")
-    .then(function() {})
-    .catch(function(error) {
-        alert(error);
-    });
+    screen.orientation.lock("landscape-primary")
+        .then(function() {})
+        .catch(function(error) {
+            alert(error);
+        });
+}
+
+setSreen();
+
 // });
