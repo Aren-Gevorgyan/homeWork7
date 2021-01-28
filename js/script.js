@@ -12,7 +12,7 @@ else if (document.documentElement.webkitRequestFullScreen)
 
 screen.orientation.lock("landscape-primary")
     .then(function() {
-        // lockButton.style.display = 'none';
+        lockButton.style.display = 'none';
     })
     .catch(function(error) {
         alert(error);
