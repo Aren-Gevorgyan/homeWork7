@@ -13,7 +13,6 @@ document.querySelector("#lock-landscape-button").addEventListener('click', funct
     screen.orientation.lock("landscape-primary")
         .then(function() {
             // lockButton.style.display = 'none';
-            document.querySelector(".container").style.backgroundColor = 'green';
         })
         .catch(function(error) {
             alert(error);
