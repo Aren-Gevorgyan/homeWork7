@@ -4,23 +4,20 @@
 // status.innerHTML = screen.orientation.type + ' mode';
 
 // lockButton.addEventListener('click', function() {
-function setSreen() {
-    if (document.documentElement.requestFullscreen) {
-        document.querySelector(".container").requestFullscreen();
-    } else if (document.documentElement.webkitRequestFullScreen) {
-        document.querySelector(".container").webkitRequestFullScreen();
-        screen.orientation.lock("landscape-primary")
-            .then(function() {})
-            .catch(function(error) {
-                alert(error);
-            });
-    }
-}
-setSreen();
-window.screen.orientation.lock("landscape-primary")
-if (this.platform.is('cordova')) {
-    this.platform.ready().then(() => {
-        this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
-    })
-}
+window.addEventListener("load", function(event) {
+    alert("All resources finished loading!");
+    if (document.documentElement.requestFullscreen)
+        document.querySelector("#container").requestFullscreen({ navigationUI: "show" });
+    else if (document.documentElement.webkitRequestFullScreen)
+        document.querySelector("#container").webkitRequestFullScreen({ navigationUI: "show" });
+
+    screen.orientation.lock("landscape-primary")
+        .then(function() {
+            status.innerHTML = screen.orientation.type + ' mode';
+            document.querySelector("#container").style.backgroundColor = 'green';
+        })
+        .catch(function(error) {
+            alert(error);
+        });
+});
 // });
