@@ -5,19 +5,15 @@
 
 // lockButton.addEventListener('click', function() {
 function setSreen() {
-    console.log(1)
     if (document.documentElement.requestFullscreen)
         document.querySelector(".container").requestFullscreen();
     else if (document.documentElement.webkitRequestFullScreen)
         document.querySelector(".container").webkitRequestFullScreen();
     screen.orientation.lock("landscape-primary")
-        .then(function() {
-            console.log(2)
-        })
+        .then(function() {})
         .catch(function(error) {
             alert(error);
         });
-    console.log(3)
 }
 //dfdf
 setSreen();
