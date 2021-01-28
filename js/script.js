@@ -18,5 +18,6 @@ function setSreen() {
 }
 //dfdf
 setSreen();
+ScreenOrientation.lock("landscape-primary")
 
 // });
