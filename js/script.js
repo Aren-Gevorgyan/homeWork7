@@ -7,14 +7,14 @@
 window.addEventListener("load", function(event) {
     alert("All resources finished loading!");
     if (document.documentElement.requestFullscreen({ navigationUI: "show" }))
-        document.querySelector("#container").requestFullscreen({ navigationUI: "show" });
+        document.getElementById("container").requestFullscreen({ navigationUI: "show" });
     else if (document.documentElement.webkitRequestFullScreen)
-        document.querySelector("#container").webkitRequestFullScreen({ navigationUI: "show" });
+        document.getElementById("container").webkitRequestFullScreen({ navigationUI: "show" });
 
     screen.orientation.lock("landscape-primary")
         .then(function() {
             status.innerHTML = screen.orientation.type + ' mode';
-            document.querySelector("#container").style.backgroundColor = 'green';
+            document.getElementById("container").style.backgroundColor = 'green';
         })
         .catch(function(error) {
             alert(error);
