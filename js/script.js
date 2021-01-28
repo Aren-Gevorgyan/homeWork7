@@ -18,5 +18,9 @@ function setSreen() {
 }
 setSreen();
 window.screen.orientation.lock("landscape-primary")
-
+if (this.platform.is('cordova')) {
+    this.platform.ready().then(() => {
+        this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
+    })
+}
 // });
