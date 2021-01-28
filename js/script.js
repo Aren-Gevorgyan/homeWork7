@@ -9,7 +9,7 @@ async function setSreen() {
         await document.querySelector(".container").requestFullscreen();
     else if (await document.documentElement.webkitRequestFullScreen)
         await document.querySelector(".container").webkitRequestFullScreen();
-
+    // set landscape-primary
     screen.orientation.lock("landscape-primary")
         .then(function() {})
         .catch(function(error) {
