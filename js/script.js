@@ -10,7 +10,6 @@ async function setSreen() {
         document.querySelector(".container").requestFullscreen();
     else if (document.documentElement.webkitRequestFullScreen)
         document.querySelector(".container").webkitRequestFullScreen();
-    // set landscape-primary
     screen.orientation.lock("landscape-primary")
         .then(function() {
             console.log(2)
