@@ -1,19 +1,15 @@
 $(document).ready(function() {
 
     $('#ok').click(function() {
-        if (document.documentElement.requestFullscreen)
-            document.querySelector(".container").requestFullscreen();
-        else if (document.documentElement.webkitRequestFullScreen)
-            document.querySelector(".container").webkitRequestFullScreen();
-
-        screen.orientation.lock("landscape-primary")
-            .then(function() {
-
-
-            })
-            .catch(function(error) {
-                alert(error);
-            });
+        let elem = document.documentElement;
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        }
+        screen.orientation.lock("landscape-primary");
     })
 
 })
